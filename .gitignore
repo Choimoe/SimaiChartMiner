@@ -1,0 +1,53 @@
+# 系统生成的文件
+.DS_Store
+Thumbs.db
+
+# Python 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+
+# 字节码文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 日志文件
+*.log
+*.log.*
+
+# 测试报告
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+
+# 打包相关
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+
+# IDE 和编辑器相关
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# 数据库文件
+*.sqlite3
+
+# 配置文件示例（如果你不想提交配置文件，可根据实际情况调整）
+config.ini.example
+settings.py.example
+
+# 临时文件和备份文件
+*.bak
+*.swp
+*~
+
+# Jupyter Notebook 相关
+.ipynb_checkpoints/
