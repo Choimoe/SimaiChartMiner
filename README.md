@@ -32,7 +32,7 @@ SimaiChartMiner/
 **方式一：克隆时一并下载 (推荐)**
 
 ```
-git clone --recurse-submodules [你的模板仓库URL]
+git clone --recurse-submodules https://github.com/Choimoe/SimaiChartMiner.git
 cd SimaiChartMiner
 ```
 
@@ -43,7 +43,7 @@ cd SimaiChartMiner
 如果你已经克隆了项目但未下载数据，可以执行以下命令：
 
 ```
-git clone [你的模板仓库URL]
+git clone https://github.com/Choimoe/SimaiChartMiner.git
 cd SimaiChartMiner
 git submodule update --init --recursive
 ```
