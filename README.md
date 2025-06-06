@@ -17,6 +17,7 @@
 ```
 SimaiChartMiner/
 ├── data/
+├── util.py
 ├── main.py
 └── README.md
 ```
@@ -55,7 +56,7 @@ git submodule update --init --recursive
 安装所有必要的依赖：
 
 ```
-pip install PySimaiParser
+pip install -r requirements.txt
 ```
 
 ## 💻 如何使用
@@ -72,14 +73,18 @@ python main.py
 python main.py /path/to/your/chart/data
 ```
 
-运行后，你将在终端看到类似如下格式的输出：
+运行后，你将在终端看到带有进度条的分析过程，以及对齐整洁的输出结果：
 
 ```
+开始扫描目录: data
+正在分析谱面: 100%|████████████████████| 1621/1621 [00:32<00:00, 50.45it/s, 840_IMPERISHABLENIGHT20062016REFINE]
+
 --- Chart Analysis Results (Top 50) ---
-ID       | Song Title                   | Diff Idx | Total Breaks | Special Breaks | Ratio
--------------------------------------------------------------------------------------------
-102      | Oshama Scramble!             | 5        | 12           | 10             | 83.33%
-8        | TRUELOVESONG                 | 4        | 5            | 4              | 80.00%
+ID       | Song Title                     | Diff Idx | Total Breaks | Special Breaks | Ratio   
+-----------------------------------------------------------------------------------------------
+111222   | [光]BREaK! BREaK! BREaK![宴]   | 6        | 918          | 918            | 100.00% 
+140227   | [某]Garakuta Doll Play[宴]     | 6        | 341          | 341            | 100.00% 
+130227   | [玉]Garakuta Doll Play[宴]     | 6        | 253          | 253            | 100.00% 
 ...
 ```
 
