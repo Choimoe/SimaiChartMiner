@@ -26,28 +26,28 @@ SimaiChartMiner/
 
 请按照以下步骤来配置和运行本项目。
 
-### 1. 克隆项目与数据
 
-获取本项目和其中预先配置的谱面数据 `submodule`，你有以下两种选择：
+### 0. 使用本项目作为模板（可选）
 
-**方式一：克隆时一并下载 (推荐)**
+使用右上角 Use this template - Create a new repository 来基于本模板创建您自己的项目。
 
-```
-git clone --recurse-submodules https://github.com/Choimoe/SimaiChartMiner.git
-cd SimaiChartMiner
-```
+### 1. 克隆本项目及子模块
 
-这条命令会在克隆主项目的同时，自动初始化并下载 `data` 目录下的谱面数据。
-
-**方式二：分开下载**
-
-如果你已经克隆了项目但未下载数据，可以执行以下命令：
+地址请修改为您基于本模板创建的新项目地址：
 
 ```
 git clone https://github.com/Choimoe/SimaiChartMiner.git
 cd SimaiChartMiner
+```
+
+下载谱面文件：
+
+```
 git submodule update --init --recursive
 ```
+
+请注意，谱面文件子模块仓库体积较大，请确认您已经成功下载，否则后续 `main.py` 会找不到谱面文件。
+
 
 ### 2. 配置环境与安装依赖
 
@@ -123,3 +123,19 @@ def process_chart_file(chart_file_path):
 2. 在循环中，判断 `note.get("note_type") == "SLIDE"`，如果为真，则计数器加一。
 3. 将 `slide_note_count` 添加到返回的 `fumen_results` 字典中。
 4. 最后，修改 `print_results` 函数以展示新的统计数据。
+
+关于 `fumen` 具体的结构可以参考：[PySimaiParser - Wiki](https://github.com/Choimoe/PySimaiParser/wiki)。
+
+## 贡献
+
+欢迎参与贡献！如果您想为项目做出贡献，请考虑以下几点：
+
+- Fork 本仓库。
+- 为您的新功能或错误修复创建一个新的分支。
+- 为您的更改编写测试。
+- 确保所有测试都通过。
+- 提交一个 Pull Request，并清晰描述您的更改。
+
+## 许可证
+
+本项目采用 MIT 许可证。详情请参阅 `LICENSE` 文件。
